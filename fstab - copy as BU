@@ -1,0 +1,8 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=39aaa8a8-01  /boot           vfat    defaults          0       2
+PARTUUID=39aaa8a8-02  /               ext4    defaults,noatime  0       1
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+//192.168.0.115/david /home/pi/mycloud cifs credentials=/home/pi/.credentials,uid=1000,iocharset=utf8 0 0
+/dev/sda1 /home/duck-sftp/usb vfat defaults,user,uid=1002,gid=1005 0
+/dev/sdb1 /home/rpi4-sftp/usb vfat defaults,user,uid=1003,gid=1005 0
